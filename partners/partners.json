@@ -1,0 +1,58 @@
+[
+  {
+    "image": "/assets/locust-icon.png",
+    "alt": "Locust | UDL",
+    "name": "Locust | UDL",
+    "desc": "UDL Official Headquarters | Roblox Development server.",
+    "links": [
+      { "url": "https://discord.gg/locust", "text": "discord.gg/locust" }
+    ]
+  },
+  {
+    "image": "/assets/devsecnetwork-icon.png",
+    "alt": "DevSec Network",
+    "name": "DevSec Network | DSN",
+    "desc": "Provides security with their scam reporting and automatic banning system.",
+    "links": [
+      { "url": "https://devsecnetwork.com", "text": "devsecnetwork.com" },
+      { "url": "https://discord.gg/devsec", "text": "discord.gg/devsec" }
+    ]
+  },
+  {
+    "image": "/assets/spark-logo.png",
+    "alt": "Spark",
+    "name": "Spark | DSN",
+    "desc": "Part of the DevSec Network | A community that brings developers and commissioners to the same place.",
+    "links": [
+      { "url": "https://discord.gg/spark-dsn", "text": "discord.gg/spark-dsn" }
+    ]
+  },
+  {
+    "image": "/assets/moonsoftware-icon.png",
+    "alt": "Moonsoftware",
+    "name": "Moonsoftware",
+    "desc": "Find devs, find work, educate, careers, assets, and more. Future collaborations bring us an intuitive market system.",
+    "links": [
+      { "url": "https://moonsoftwareroblox.com",      "text": "moonsoftwareroblox.com" },
+      { "url": "https://discord.gg/robloxdevelopers", "text": "discord.gg/robloxdevelopers" }
+    ]
+  },
+  {
+    "image": "/assets/devcord-icon-white.jpg",
+    "alt": "DevCord",
+    "name": "DevCord",
+    "desc": "Provider for /portfolio bot via the @Portfolio Tool, bot.",
+    "links": [
+      { "url": "https://discord.gg/rblxdevs", "text": "discord.gg/rblxdevs" }
+    ]
+  },
+  {
+    "image": "/assets/gatogfxlogo.png",
+    "alt": "Gato's GFX",
+    "name": "Gato's GFX",
+    "desc": "Share your Roblox creations (mainly GFX and designs) and interact with a chill community.",
+    "links": [
+      { "url": "https://discord.gg/HFmVCVKzfA", "text": "discord.gg/HFmVCVKzfA" }
+    ]
+  }
+]

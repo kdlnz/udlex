@@ -1,14 +1,5 @@
 [
-  {
-    "image": "/assets/locust-icon.png",
-    "alt": "Locust | UDL",
-    "name": "Locust | UDL",
-    "desc": "UDL Official Headquarters | Roblox Development server.",
-    "links": [
-      { "url": "https://discord.gg/locust", "text": "discord.gg/locust" }
-    ]
-  },
-  {
+{
     "image": "/assets/devsecnetwork-icon.png",
     "alt": "DevSec Network",
     "name": "DevSec Network | DSN",
@@ -35,15 +26,6 @@
     "links": [
       { "url": "https://moonsoftwareroblox.com",      "text": "moonsoftwareroblox.com" },
       { "url": "https://discord.gg/robloxdevelopers", "text": "discord.gg/robloxdevelopers" }
-    ]
-  },
-  {
-    "image": "/assets/devcord-icon-white.jpg",
-    "alt": "DevCord",
-    "name": "DevCord",
-    "desc": "Provider for /portfolio bot via the @Portfolio Tool, bot.",
-    "links": [
-      { "url": "https://discord.gg/rblxdevs", "text": "discord.gg/rblxdevs" }
     ]
   },
   {

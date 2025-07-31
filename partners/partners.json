@@ -1,14 +1,4 @@
 [
-{
-    "image": "/assets/devsecnetwork-icon.png",
-    "alt": "DevSec Network",
-    "name": "DevSec Network | DSN",
-    "desc": "Provides security with their scam reporting and automatic banning system.",
-    "links": [
-      { "url": "https://devsecnetwork.com", "text": "devsecnetwork.com" },
-      { "url": "https://discord.gg/devsec", "text": "discord.gg/devsec" }
-    ]
-  },
   {
     "image": "/assets/spark-logo.png",
     "alt": "Spark",
@@ -26,15 +16,6 @@
     "links": [
       { "url": "https://moonsoftwareroblox.com",      "text": "moonsoftwareroblox.com" },
       { "url": "https://discord.gg/robloxdevelopers", "text": "discord.gg/robloxdevelopers" }
-    ]
-  },
-  {
-    "image": "/assets/gatogfxlogo.png",
-    "alt": "Gato's GFX",
-    "name": "Gato's GFX",
-    "desc": "Share your Roblox creations (mainly GFX and designs) and interact with a chill community.",
-    "links": [
-      { "url": "https://discord.gg/HFmVCVKzfA", "text": "discord.gg/HFmVCVKzfA" }
     ]
   }
 ]

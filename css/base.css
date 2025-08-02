@@ -68,9 +68,10 @@ ul li::before {
   content: "•";
   position: absolute;
   left: 0;
-  color: #000;
+  color: #0066ff;
   font-size: 1.25rem;
   line-height: 1;
+  text-shadow: 0 0 10px rgba(0, 102, 255, 0.3);
 }
 
 ul ul {
@@ -85,23 +86,26 @@ ul ul li {
 
 ul ul li::before {
   content: "–";
-  color: #555;
+  color: #1e3a5f;
   left: 0;
   font-size: 1rem;
+  text-shadow: 0 0 8px rgba(0, 102, 255, 0.2);
 }
 
 /* ===== Strong & Inline Code ===== */
 strong {
-  color: #000;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 102, 255, 0.2);
 }
 
 code {
-  background-color: #eef;
+  background-color: #1a1a2e;
   padding: 0.15rem 0.3rem;
   border-radius: 3px;
   font-family: Consolas, Menlo, Monaco, monospace;
   font-size: 0.95rem;
-  color: #000;
+  color: #fff;
+  border: 1px solid #1e3a5f;
 }
 
 /* ===== Hero Section (index.html) ===== */

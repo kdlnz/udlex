@@ -17,5 +17,14 @@
       { "url": "https://moonsoftwareroblox.com",      "text": "moonsoftwareroblox.com" },
       { "url": "https://discord.gg/robloxdevelopers", "text": "discord.gg/robloxdevelopers" }
     ]
+  },
+   {
+    "image": "/assets/amazark-banner.png",
+    "alt": "Amazark",
+    "name": "Amazark",
+    "desc": "Roblox Development Services.",
+    "links": [
+      { "url": "https://discord.gg/amazark", "text": "discord.gg/amazark" }
+    ]
   }
 ]

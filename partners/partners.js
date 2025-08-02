@@ -10,12 +10,24 @@
     const item = document.createElement('div');
     item.className = 'partner-item';
 
-    // image
+    // image container for progressive loading
+    const imgContainer = document.createElement('div');
+    imgContainer.className = 'progressive-img-container';
+
     const img = document.createElement('img');
     img.src = p.image;
     img.alt = p.alt;
     img.className = 'partner-image';
-    item.appendChild(img);
+    img.loading = "lazy"; // Enable native lazy loading
+    
+    // Add fade-in effect when image loads
+    img.style.opacity = "0";
+    img.onload = function() {
+      img.style.opacity = "1";
+    };
+
+    imgContainer.appendChild(img);
+    item.appendChild(imgContainer);
 
     // name
     const h3 = document.createElement('h3');

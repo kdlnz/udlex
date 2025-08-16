@@ -63,6 +63,11 @@
   /* List Items */
   --list-bullet-color: #0066ff;
   --list-bullet-shadow: rgba(0, 102, 255, 0.2);
+
+  /* Scrollbar (theme-aware defaults) */
+  --scroll-thumb: rgba(0,0,0,0.12);
+  --scroll-thumb-hover: rgba(0,0,0,0.18);
+  --scroll-track: transparent;
 }
 
 [data-theme="dark"] {
@@ -129,4 +134,9 @@
   /* List Items */
   --list-bullet-color: #0066ff;
   --list-bullet-shadow: rgba(0, 102, 255, 0.3);
+
+  /* Scrollbar (dark theme overrides) */
+  --scroll-thumb: rgba(255,255,255,0.06);
+  --scroll-thumb-hover: rgba(255,255,255,0.12);
+  --scroll-track: transparent;
 }

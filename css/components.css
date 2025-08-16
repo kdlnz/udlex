@@ -11,6 +11,37 @@
   box-shadow: 0 4px 20px var(--accent-glow);
 }
 
+/* Hero content wrapper: vertically center content and reserve space for the floated iframe */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+  min-height: 420px;      /* roughly match iframe height */
+  padding-right: 380px;   /* reserve space so text doesn't flow under the iframe */
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    padding-right: 0;
+    min-height: auto;
+  }
+}
+
+/* Make Discord iframe sit to the right and not push content (text will wrap) */
+/* Target embedded Discord widget only */
+.hero iframe[src*="discord.com/widget"] {
+  float: right;
+  width: 350px;
+  max-width: 40%;
+  height: 500px;
+  margin: 0 0 1rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  background: var(--card-bg);
+}
+
 .button {
   display: inline-flex;
   justify-content: center;
@@ -147,3 +178,45 @@ details.partner-details .partner-content {
 .footer-links a { color: var(--text-secondary); text-decoration:none; }
 
 .footer-links a:hover { color: var(--accent-primary, var(--accent-color)); }
+
+/* Custom scrollbar (theme-aware) - larger, rounded, accent colored */
+/* WebKit/Blink browsers */
+*::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+  background: transparent; /* make overall scrollbar background transparent */
+  border-radius: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent; /* fully transparent track */
+  border-radius: 12px;
+}
+*::-webkit-scrollbar-corner {
+  background: transparent; /* corner (when both scrollbars present) */
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--accent-primary, var(--accent-color));
+  border-radius: 999px; /* fully rounded */
+  border: 3px solid var(--card-bg); /* slimmer padded look */
+  min-height: 36px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+}
+*::-webkit-scrollbar-thumb:hover {
+  filter: brightness(0.95);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: auto; /* keep thicker */
+  scrollbar-color: var(--accent-primary, var(--accent-color)) transparent; /* thumb, track */
+}
+
+/* Reduce noise for small controls */
+button::-webkit-scrollbar, input::-webkit-scrollbar, textarea::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *::-webkit-scrollbar-thumb { transition: none; }
+}

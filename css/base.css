@@ -1,267 +1,104 @@
 /* base.css
-   • Resets + box‐sizing
+   • Resets + box‑sizing
    • Basic typography (body, h2, p)
    • List styling
-   • Buttons (generic)
-   • <details>/<summary> dropdown
-   • Hero section (fo/* ===== Details / Summary "How to Partner" ===== */
-details.partner-details {
-  margin: 2rem 0;
-  border: 1px solid #1e3a5f;
-  border-radius: 8px;
-  background-color: #0d1b2a;
-  box-shadow: 0 0 15px rgba(0, 102, 255, 0.1);
-}.html)
+   • Strong / code styling
+   • Small utilities
 */
 
-/* ===== Resets & Box‐Sizing ===== */
+/* ===== Resets & Box‑Sizing ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
+/* Disable all transitions/animations globally to prevent any theme-change or load fades */
+*, *::before, *::after {
+  transition: none !important;
+  animation: none !important;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0a0a0f;
-  color: #e1e1e6;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   line-height: 1.6;
   padding-top: 3.5rem; /* pushes content below sticky header */
 }
 
 /* ===== Container ===== */
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
 /* ===== Typography ===== */
+h1, h2, h3 {
+  color: var(--heading-color, var(--text-primary));
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
 h2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
-  color: #fff;
-  border-bottom: 2px solid #1e3a5f;
+  border-bottom: 2px solid var(--border-primary, var(--border-color));
   padding-bottom: 0.25rem;
 }
 
 p {
   margin-bottom: 1rem;
   font-size: 1rem;
-  color: #b4b4b8;
+  color: var(--text-secondary);
 }
 
 /* ===== Lists ===== */
-ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 1.5rem;
-}
+ul { list-style: none; padding-left: 0; margin-bottom: 1.5rem; }
 
-ul li {
-  position: relative;
-  margin-bottom: 1rem;
-  padding-left: 1rem;
-}
+ul li { position: relative; margin-bottom: 1rem; padding-left: 1rem; }
 
 ul li::before {
   content: "•";
   position: absolute;
   left: 0;
-  color: #0066ff;
+  color: var(--list-bullet-color, var(--list-bullet));
   font-size: 1.25rem;
   line-height: 1;
-  text-shadow: 0 0 10px rgba(0, 102, 255, 0.3);
+  text-shadow: 0 0 6px var(--accent-glow);
 }
 
-ul ul {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
+ul ul { margin-top: 0.5rem; margin-bottom: 0.5rem; }
 
-ul ul li {
-  margin-bottom: 0.75rem;
-  padding-left: 1.5rem;
-}
+ul ul li { margin-bottom: 0.75rem; padding-left: 1.5rem; }
 
-ul ul li::before {
-  content: "–";
-  color: #1e3a5f;
-  left: 0;
-  font-size: 1rem;
-  text-shadow: 0 0 8px rgba(0, 102, 255, 0.2);
-}
+ul ul li::before { content: "–"; color: var(--list-bullet-sub, var(--list-bullet-color)); left: 0; font-size: 1rem; }
 
 /* ===== Strong & Inline Code ===== */
-strong {
-  color: #fff;
-  text-shadow: 0 0 10px rgba(0, 102, 255, 0.2);
-}
+strong { color: var(--heading-color); }
 
 code {
-  background-color: #1a1a2e;
+  background-color: var(--code-bg);
   padding: 0.15rem 0.3rem;
   border-radius: 3px;
   font-family: Consolas, Menlo, Monaco, monospace;
   font-size: 0.95rem;
-  color: #fff;
-  border: 1px solid #1e3a5f;
+  color: var(--code-text);
+  border: 1px solid var(--code-border);
 }
 
-/* ===== Hero Section (index.html) ===== */
-.hero {
-  text-align: center;
-  margin-top: 2rem;
-  padding: 3rem 1rem;
-  background: linear-gradient(to bottom, #0d1b2a, #0a0a0f);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 102, 255, 0.1);
-}
+/* Small utilities */
+.text-muted { color: var(--text-muted); }
+.hidden { display: none !important; }
 
-.hero-logo {
-  margin-bottom: 2rem;
-}
-
-.main-logo {
-  width: 180px;
-  height: auto;
-  filter: drop-shadow(0 0 15px rgba(0, 102, 255, 0.3));
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.main-logo:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 20px rgba(0, 102, 255, 0.5));
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 0.5rem;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(0, 102, 255, 0.3);
-  letter-spacing: 1px;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  color: #b4b4b8;
-  margin-bottom: 2rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.8;
-}
-
-/* ===== Generic Button ===== */
-.button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #fff;
-  background-color: #1a1a2e;
-  border: 2px solid #0066ff;
-  border-radius: 4px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  white-space: normal;
-  word-break: break-word;
-  max-width: 100%;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 102, 255, 0.2);
-  margin: 0.5rem;
-}
-
-.button:hover {
-  background-color: #252542;
-  box-shadow: 0 0 20px rgba(0, 102, 255, 0.4);
-  transform: translateY(-1px);
-}
-
-.button:active {
-  transform: translateY(1px);
-}
-
-/* Responsive tweaks for hero/buttons */
 @media (max-width: 600px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .hero p {
-    font-size: 1.1rem;
-  }
-  .button {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.8rem;
-  }
-}
-
-/* ===== Details / Summary “How to Partner” ===== */
-details.partner-details {
-  margin: 2rem 0;
-  border: 1px solid #1e3a5f;
-  border-radius: 8px;
-  background-color: #0d1b2a;
-  box-shadow: 0 0 15px rgba(0, 102, 255, 0.1);
-}
-
-details.partner-details summary {
-  padding: 1rem 1.5rem;
-  cursor: pointer;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #fff;
-  list-style: none; /* remove default arrow bullet */
-  background: linear-gradient(to right, #0d1b2a, #1e3a5f);
-  border-radius: 7px;
-  transition: all 0.3s ease;
-  text-shadow: 0 0 10px rgba(0, 102, 255, 0.3);
-}
-
-details.partner-details summary:hover {
-  background: linear-gradient(to right, #0d1b2a, #264973);
-  box-shadow: 0 0 15px rgba(0, 102, 255, 0.2);
-}
-
-details.partner-details summary::-webkit-details-marker {
-  display: none; /* hide default marker in WebKit */
-}
-
-details.partner-details summary .arrow {
-  display: inline-block;
-  margin-left: 0.5rem;
-  transform: rotate(0deg);
-  transition: transform 0.3s ease;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(0, 102, 255, 0.3);
-}
-
-details.partner-details[open] summary .arrow {
-  transform: rotate(-180deg);
-}
-
-details.partner-details[open] summary {
-  border-bottom: 1px solid #1e3a5f;
-}
-
-details.partner-details .partner-content {
-  padding: 1.5rem;
-  color: #b4b4b8;
-  line-height: 1.6;
-  font-size: 1rem;
-  background-color: #0a0a0f;
-}
-
-/* Responsive tweaks for details/summary content */
-@media (max-width: 600px) {
-  details.partner-details summary {
-    font-size: 1.1rem;
-  }
-  details.partner-details .partner-content {
-    font-size: 0.9rem;
-  }
+  h1 { font-size: 2rem; }
 }

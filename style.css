@@ -2,6 +2,9 @@
    Imports all other CSS chunks so HTML only needs to reference this file.
 */
 
+@import "./css/variables.css";
 @import "./css/base.css";
+@import "./css/layout.css";
+@import "./css/components.css";
 @import "./css/header.css";
 @import "./css/partners.css";

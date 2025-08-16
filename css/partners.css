@@ -7,8 +7,8 @@
   font-size: 1.5rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(0, 102, 255, 0.3);
+  color: var(--heading-color);
+  text-shadow: none;
 }
 
 .partner-grid {
@@ -19,19 +19,19 @@
 }
 
 .partner-item {
-  background-color: #0d1b2a;
-  border: 1px solid #1e3a5f;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1.5rem;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(0, 102, 255, 0.1);
+  box-shadow: 0 0 10px var(--card-shadow);
 }
 
 .partner-item:hover {
-  box-shadow: 0 0 20px rgba(0, 102, 255, 0.2);
+  box-shadow: 0 0 18px var(--accent-glow);
   transform: translateY(-2px);
-  border-color: #0066ff;
+  border-color: var(--accent-primary, var(--accent-color));
 }
 
 .progressive-img-container {
@@ -52,13 +52,12 @@
 .partner-name {
   font-size: 1.25rem;
   margin: 0.5rem 0 0.25rem;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(0, 102, 255, 0.2);
+  color: var(--heading-color);
 }
 
 .partner-desc {
   font-size: 0.95rem;
-  color: #b4b4b8;
+  color: var(--text-secondary);
 }
 
 /* Buttons under partner cards */
@@ -68,14 +67,14 @@
 
 .partner-item .button {
   margin: 0.25rem;
-  background-color: #000;  /* Black buttons */
-  color: #fff;             /* White text */
+  background-color: var(--button-bg);
+  color: var(--button-text);
   padding: 0.5rem 0.75rem;
   font-size: 0.85rem;
 }   
 
 .partner-item .button:hover {
-  background-color: #222;
+  background-color: var(--button-hover-bg);
 }
 
 /* Responsive tweaks for partner cards */

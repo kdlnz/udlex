@@ -1,0 +1,132 @@
+/* Theme Variables */
+:root {
+  /* Base Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #888888;
+  
+  /* Header */
+  --header-bg: #ffffff;
+  --header-text: #333333;
+  --header-border: #dddddd;
+  --nav-link-color: #333333;
+  --nav-link-hover: #0066ff;
+  
+  /* Accents */
+  --accent-primary: #0066ff;
+  --accent-secondary: #1e3a5f;
+  --accent-glow: rgba(0, 102, 255, 0.2);
+  
+  /* Borders */
+  --border-primary: #dddddd;
+  --border-secondary: #eeeeee;
+  
+  /* Cards & Containers */
+  --card-bg: #ffffff;
+  --card-border: #dddddd;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --card-header: #f8f9fa;
+  
+  /* Buttons */
+  --button-bg: #0066ff;
+  --button-text: #ffffff;
+  --button-border: #0055dd;
+  --button-hover-bg: #0055dd;
+  --button-hover-border: #004acc;
+  --button-secondary-bg: #ffffff;
+  --button-secondary-text: #0066ff;
+  --button-secondary-border: #0066ff;
+  --button-secondary-hover-bg: #f0f7ff;
+  
+  /* Hero Section */
+  --hero-bg-start: #ffffff;
+  --hero-bg-end: #f0f7ff;
+  --hero-text: #333333;
+  --hero-subtext: #666666;
+  
+  /* Misc */
+  --code-bg: #f5f5f5;
+  --code-text: #333333;
+  --code-border: #dddddd;
+  --dropdown-bg: #ffffff;
+  --dropdown-border: #dddddd;
+  --dropdown-shadow: rgba(0, 0, 0, 0.1);
+  
+  /* Cookie Consent */
+  --cookie-bg: #ffffff;
+  --cookie-text: #333333;
+  --cookie-border: #dddddd;
+  --cookie-shadow: rgba(0, 0, 0, 0.1);
+  
+  /* List Items */
+  --list-bullet-color: #0066ff;
+  --list-bullet-shadow: rgba(0, 102, 255, 0.2);
+}
+
+[data-theme="dark"] {
+  /* Base Colors */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #0d1b2a;
+  --text-primary: #e1e1e6;
+  --text-secondary: #b4b4b8;
+  --text-muted: #888888;
+  
+  /* Header */
+  --header-bg: #0d1b2a;
+  --header-text: #ffffff;
+  --header-border: #1e3a5f;
+  --nav-link-color: #ffffff;
+  --nav-link-hover: #0066ff;
+  
+  /* Accents */
+  --accent-primary: #0066ff;
+  --accent-secondary: #1e3a5f;
+  --accent-glow: rgba(0, 102, 255, 0.2);
+  
+  /* Borders */
+  --border-primary: #1e3a5f;
+  --border-secondary: #1a1a2e;
+  
+  /* Cards & Containers */
+  --card-bg: #0d1b2a;
+  --card-border: #1e3a5f;
+  --card-shadow: rgba(0, 102, 255, 0.1);
+  --card-header: #0a0a0f;
+  
+  /* Buttons */
+  --button-bg: #1a1a2e;
+  --button-text: #ffffff;
+  --button-border: #0066ff;
+  --button-hover-bg: #252542;
+  --button-hover-border: #0066ff;
+  --button-secondary-bg: transparent;
+  --button-secondary-text: #0066ff;
+  --button-secondary-border: #0066ff;
+  --button-secondary-hover-bg: rgba(0, 102, 255, 0.1);
+  
+  /* Hero Section */
+  --hero-bg-start: #0d1b2a;
+  --hero-bg-end: #0a0a0f;
+  --hero-text: #ffffff;
+  --hero-subtext: #b4b4b8;
+  
+  /* Misc */
+  --code-bg: #1a1a2e;
+  --code-text: #ffffff;
+  --code-border: #1e3a5f;
+  --dropdown-bg: #0a0a0f;
+  --dropdown-border: #1e3a5f;
+  --dropdown-shadow: rgba(0, 102, 255, 0.1);
+  
+  /* Cookie Consent */
+  --cookie-bg: #0d1b2a;
+  --cookie-text: #ffffff;
+  --cookie-border: #1e3a5f;
+  --cookie-shadow: rgba(0, 102, 255, 0.1);
+  
+  /* List Items */
+  --list-bullet-color: #0066ff;
+  --list-bullet-shadow: rgba(0, 102, 255, 0.3);
+}

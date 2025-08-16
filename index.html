@@ -8,16 +8,20 @@
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <!-- Sticky header (same as partners.html) -->
+  <!-- Sticky header -->
   <header class="site-header">
     <div class="header-inner">
       <div class="logo">
-        <a href="/">UDLex</a>
+        <a href="/">
+          <img src="/assets/unify-logo.png" alt="UDLex logo" class="logo-img">
+          <span class="logo-text">UDLex</span>
+        </a>
       </div>
       <nav class="nav-links">
         <a href="/">Home</a>
         <a href="/partners">Partnerships</a>
         <a href="https://discord.gg/unifydevs" target="_blank">Discord</a>
+        <button id="theme-toggle" class="button theme-toggle">Dark Mode</button>
       </nav>
     </div>
   </header>
@@ -29,12 +33,34 @@
         <img src="/assets/unify-logo.png" alt="Unify Logo" class="main-logo">
       </div>
       <h1>UDLex</h1>
-      <p>Welcome to UDLex! The official website for UnifyDevs!<p>We're a Roblox Developer Discord community! Here, you can showcase your work, engage in development-related discussions, and join exciting community events. We strive to create a space where Roblox developers and creators can promote their work and foster their career growth. Let’s collaborate, grow, and unify together!</p>
+      <p>Welcome to UDLex! The official website for UnifyDevs! We're a Roblox Developer Discord community. Here, you can showcase your work, engage in development-related discussions, and join exciting community events. We strive to create a space where Roblox developers and creators can promote their work and foster their career growth. Let’s collaborate, grow, and unify together!</p>
       <div class="button-container">
         <a class="button" href="partners">Partnerships</a>
         <a class="button" href="https://discord.gg/unifydevs" target="_blank">Join Discord</a>
       </div>
     </section>
+
+    <!-- FAQ Section (loaded from JSON) -->
+    <section id="faq" class="faq container">
+      <h2>Frequently Asked Questions</h2>
+      <div id="faq-list" class="faq-list"></div>
+    </section>
+
   </main>
+
+  <!-- Load FAQ script -->
+  <script src="/faq/faq.js"></script>
+
+  <!-- Cookie Consent -->
+  <div id="cookie-consent" class="cookie-consent">
+    <p>We use cookies to remember your preferences.</p>
+    <div class="cookie-buttons">
+      <button id="accept-cookies" class="button cookie-button">Accept</button>
+      <button id="decline-cookies" class="button cookie-button cookie-decline">Decline</button>
+    </div>
+  </div>
+
+  <!-- Theme and Cookie Management Script -->
+  <script src="/js/theme.js"></script>
 </body>
 </html>

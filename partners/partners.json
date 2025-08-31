@@ -1,14 +1,5 @@
 [
   {
-    "image": "/assets/spark-logo.png",
-    "alt": "Spark",
-    "name": "Spark | DSN",
-    "desc": "Part of the DevSec Network | A community that brings developers and commissioners to the same place.",
-    "links": [
-      { "url": "https://discord.gg/sparktalent", "text": "discord.gg/sparktalent" }
-    ]
-  },
-  {
     "image": "/assets/moonsoftware-icon.png",
     "alt": "Moonsoftware",
     "name": "Moonsoftware",

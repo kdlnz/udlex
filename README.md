@@ -1,1 +1,2 @@
 # udlex
+static test

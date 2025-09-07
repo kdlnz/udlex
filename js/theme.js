@@ -1,5 +1,5 @@
 // Theme Management
-const themeToggle = document.getElementById('theme-toggle');
+let themeToggle = null;
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
 function setTheme(theme) {
@@ -16,6 +16,7 @@ function setTheme(theme) {
 }
 
 function updateButtonText() {
+  themeToggle = document.getElementById('theme-toggle');
   if (!themeToggle) return;
   const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
   themeToggle.textContent = currentTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
@@ -79,13 +80,18 @@ if (!cookieConsent) {
 let acceptCookies = document.getElementById('accept-cookies');
 let declineCookies = document.getElementById('decline-cookies');
 
-// Theme toggle handler
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-    setTheme(currentTheme === 'dark' ? 'light' : 'dark');
-  });
-}
+// Theme toggle handler: delegated to document so it works for injected header
+document.addEventListener('click', (e) => {
+  const target = e.target.closest && e.target.closest('#theme-toggle');
+  if (!target) return;
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+  setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+});
+
+// Rebind when header is injected (header-loader dispatches this event)
+window.addEventListener('header-injected', () => {
+  updateButtonText();
+});
 
 // Cookie handlers (wired whether the markup existed or was injected)
 if (acceptCookies) {

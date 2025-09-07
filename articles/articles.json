@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Getting started with UDLex",
+    "slug": "getting-started-udlex",
+    "category": "tutorials",
+    "tags": ["intro","udlex","community"],
+    "date": "2025-09-01",
+    "excerpt": "A quick guide to get started with UDLex and joining our developer community.",
+    "seo": {
+      "title": "Getting started with UDLex — UDLex",
+      "description": "Learn how to get started with UDLex, join the Discord, and showcase your Roblox projects.",
+      "image": "/assets/udbanner.png"
+    }
+  },
+  {
+    "title": "UDLex Partnership Program",
+    "slug": "udlex-partnerships",
+    "category": "news",
+    "tags": ["partners","announcement"],
+    "date": "2025-08-20",
+    "excerpt": "Overview of the UDLex partnership program and how to apply.",
+    "seo": {
+      "title": "UDLex Partnership Program — Announcements",
+      "description": "Details about our partnership program and benefits for selected partners.",
+      "image": "/assets/spark-banner.png"
+    }
+  }
+  ,
+  {
+    "title": "RDC25 & #FreeSchlep: A Turning Point for Roblox's Community and Safety",
+    "slug": "rdc25-freeschlep",
+    "category": "news",
+    "tags": ["RDC25","FreeSchlep","Roblox","Community","Safety"],
+    "date": "2025-09-07",
+    "excerpt": "Coverage of RDC25 announcements and the #FreeSchlep movement, and what they mean for community safety and creator tools.",
+    "seo": {
+      "title": "RDC25 & #FreeSchlep: A Turning Point for Roblox's Community and Safety — UDLex",
+      "description": "Explore RDC25 announcements and the #FreeSchlep movement, focusing on new creator features and community safety.",
+      "image": "https://example.com/assets/rdc25_freeschlep_banner.png"
+    }
+  }
+]

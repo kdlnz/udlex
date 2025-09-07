@@ -156,6 +156,10 @@ details.partner-details .partner-content {
 
 /* Ensure header stays visible: remove transforms from parent containers that may break sticky */
 .site-header { position: sticky; top: 0; z-index: 9999; }
+/* Header injection transition */
+.site-header { transition: opacity 260ms ease, transform 260ms ease; }
+.site-header.hidden { opacity: 0; transform: translateY(-6px); pointer-events:none; }
+.site-header.visible { opacity: 1; transform: translateY(0); pointer-events:auto; }
 
 /* FAQ styles */
 .faq { margin-top: 2rem; }
@@ -219,4 +223,95 @@ button::-webkit-scrollbar, input::-webkit-scrollbar, textarea::-webkit-scrollbar
 
 @media (prefers-reduced-motion: reduce) {
   *::-webkit-scrollbar-thumb { transition: none; }
+}
+
+/* Articles search styles */
+.articles-search .search-controls { display:flex; gap:0.5rem; align-items:center; margin-bottom:1rem; }
+.articles-search input#search-input { flex:1; padding:0.6rem 0.8rem; border-radius:8px; border:1px solid var(--border-color); background:var(--card-bg); color:var(--text-primary); }
+.articles-search select { padding:0.5rem; border-radius:8px; border:1px solid var(--border-color); background:var(--card-bg); color:var(--text-primary); }
+.articles-search .sort-controls { display:flex; gap:0.5rem; align-items:center; }
+.articles-search .sort-buttons { display:flex; gap:0.4rem; }
+.articles-search .sort-buttons .button { padding:0.35rem 0.6rem; font-size:0.8rem; }
+.articles-search .category-controls { display:flex; gap:0.6rem; align-items:center; }
+.articles-search .category-controls label { font-size:0.85rem; color:var(--text-secondary); }
+.articles-search .category-controls input[type="checkbox"] { margin-right:0.3rem; }
+
+/* category popup */
+.category-popup-wrapper { position: relative; }
+.category-popup {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 0.6rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  min-width: 220px;
+  z-index: 1200;
+}
+.category-popup label { display:block; margin:0.25rem 0; font-size:0.9rem; color:var(--text-primary); }
+.article-results .article-item { padding:1rem; border:1px solid var(--border-color); border-radius:8px; margin-bottom:0.75rem; background:var(--card-bg); }
+.article-results .article-item h3 { margin:0 0 0.25rem 0; }
+.article-results .article-item .meta { color:var(--text-secondary); font-size:0.85rem; margin-bottom:0.5rem; }
+
+/* Make article-item a column flex container so tags can be pushed to the bottom */
+.article-results .article-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article-results .article-item .excerpt {
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  flex: 1 1 auto; /* allow excerpt to grow */
+}
+
+.article-results .article-item .tags {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end; /* place tags on the right/bottom */
+}
+
+.article-results .article-item .tag {
+  background: var(--tag-bg, rgba(0,0,0,0.06));
+  color: var(--tag-color, var(--text-secondary));
+  font-size: 0.7rem;
+  padding: 0.18rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  line-height: 1;
+}
+
+@media (max-width:700px) {
+  .articles-search .search-controls { flex-direction:column; align-items:stretch; }
+}
+
+/* Improve ordered-list indentation and numeric alignment inside article posts */
+.post ol {
+  margin-left: 1.25rem; /* give breathing room from the left edge */
+  padding-left: 1rem; /* ensure numbers and text are separated */
+}
+.post ol li {
+  margin: 0.45rem 0;
+}
+.post ol { counter-reset: item; }
+.post ol li {
+  display: block;
+  position: relative;
+  padding-left: 1.1rem; /* space for the number */
+}
+.post ol li:before {
+  content: counter(item) ".";
+  counter-increment: item;
+  position: absolute;
+  left: -1.1rem; /* pull numbers slightly left for visual balance */
+  width: 2rem;
+  text-align: right;
+  color: var(--text-secondary);
+  font-weight: 700;
 }

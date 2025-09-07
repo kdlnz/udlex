@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Articles — UDLex</title>
+  <meta name="description" content="Read articles about UDLex, tutorials, news and community updates." />
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <noscript>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo"><a href="/">UDLex</a></div>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/articles/">Articles</a>
+          <a href="/partners">Partnerships</a>
+          <a href="https://discord.gg/unifydevs" target="_blank">Discord</a>
+        </nav>
+      </div>
+    </header>
+  </noscript>
+
+  <!-- Shared header injected from /includes/header.html -->
+  <script src="/js/header-loader.js" defer></script>
+
+  <main class="container">
+    <section class="articles-search">
+      <div class="search-controls">
+        <input id="search-input" placeholder="Search keywords or tags" />
+
+        <div class="sort-controls">
+          <label for="sort-type" class="sr-only">Sort by</label>
+          <select id="sort-type">
+            <option value="date">Date</option>
+            <option value="title">Title</option>
+            <option value="author">Author</option>
+          </select>
+          <div class="sort-buttons">
+            <button id="sort-desc" class="button">Desc</button>
+            <button id="sort-asc" class="button">Asc</button>
+          </div>
+        </div>
+
+        <div class="category-popup-wrapper">
+          <button id="category-toggle" class="button">Categories ▾</button>
+          <div id="category-popup" class="category-popup" hidden>
+            <div role="group" aria-label="Article categories">
+              <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.4rem;"><button id="cat-toggle-all" class="button">Toggle All</button></div>
+              <label><input type="checkbox" value="tutorials" class="cat-checkbox" checked /> Tutorials</label>
+              <label><input type="checkbox" value="news" class="cat-checkbox" checked /> News</label>
+              <label><input type="checkbox" value="updates" class="cat-checkbox" checked /> Updates</label>
+              <label><input type="checkbox" value="announcements" class="cat-checkbox" checked /> Announcements</label>
+              <label><input type="checkbox" value="tips_and_tricks" class="cat-checkbox" checked /> Tips &amp; Tricks</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="results" class="article-results"></div>
+    </section>
+  </main>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/articles/search.js"></script>
+</body>
+</html>

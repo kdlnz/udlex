@@ -1,5 +1,6 @@
 [
   { "text": "Home", "url": "/" },
+  { "text": "Articles", "url": "/articles/" },
   { "text": "Partners", "url": "/partners" },
   { "text": "Discord", "url": "https://discord.gg/unifydevs" }
 ]

@@ -8,23 +8,22 @@
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <!-- Sticky header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="logo">
-        <a href="/">
-          <img src="/assets/unify-logo.png" alt="UDLex logo" class="logo-img">
-          <span class="logo-text">UDLex</span>
-        </a>
+  <noscript>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo"><a href="/">UDLex</a></div>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/articles/">Articles</a>
+          <a href="/partners">Partnerships</a>
+          <a href="https://discord.gg/unifydevs" target="_blank">Discord</a>
+        </nav>
       </div>
-      <nav class="nav-links">
-        <a href="/">Home</a>
-        <a href="/partners">Partnerships</a>
-        <a href="https://discord.gg/unifydevs" target="_blank">Discord</a>
-        <button id="theme-toggle" class="button theme-toggle">Dark Mode</button>
-      </nav>
-    </div>
-  </header>
+    </header>
+  </noscript>
+
+  <!-- Shared header injected from /includes/header.html -->
+  <script src="/js/header-loader.js" defer></script>
 
   <main class="container">
     <!-- “How to Partner” collapsible section with arrow -->

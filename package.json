@@ -1,0 +1,12 @@
+{
+  "name": "udlex-website",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "generate": "node ./scripts/generate-search-json.js --from-html",
+    "generate-search": "node scripts/generate-search-json.js"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

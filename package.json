@@ -3,10 +3,18 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "build": "node build.js",
+    "start": "http-server dist",
     "generate": "node ./scripts/generate-search-json.js --from-html",
     "generate-search": "node scripts/generate-search-json.js"
   },
   "engines": {
     "node": ">=16"
+  },
+  "devDependencies": {
+    "nunjucks": "^3.2.4"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
   }
 }

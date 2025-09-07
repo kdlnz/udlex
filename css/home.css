@@ -1,0 +1,86 @@
+/* tightened hero spacing to bring containers closer together */
+.hero {
+  background: transparent;
+  padding: 1rem 1rem;
+  /* reduced vertical padding */
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  /* reduced gap between columns */
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-left {
+  flex: 1 1 300px;
+  min-width: 0;
+}
+
+.hero-right {
+  flex: auto 0 clamp(360px, 38vw, 560px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo .main-logo {
+  max-width: 140px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.hero-left h1 {
+  margin: 0 0 0.25rem 0;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.hero-left p {
+  margin: 0 0 0.75rem 0;
+  line-height: 1.45;
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+}
+
+.button-container .button {
+  margin-right: 0.5rem;
+}
+
+.hero-right .discord-frame {
+  width: 100% !important;
+  height: clamp(420px, 48vw, 100px) !important;
+  max-width: 400px !important;
+  border: 0 !important;
+}
+
+@media (max-width: 600px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-right {
+    order: 2;
+    flex: 1 1 auto;
+  }
+
+  .hero-left {
+    order: 1;
+  }
+
+  .hero-right .discord-frame {
+    height: 300px !important;
+    max-width: 60% !important;
+  }
+}
+
+/* tighten spacing between major sections site-wide (if needed) */
+section {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}

@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="icon" href="/assets/unify-logo.ico" type="image/x-icon">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- SEO / Social -->
   <title>UDLex</title>
-  <meta name="description" content="UnifyDevs: a Roblox developer community for sharing projects, finding developers, and contributing on developer events. Join our Discord for support, collaboration, and showcases." />
-  <meta name="keywords" content="Roblox, developers, game dev, Discord, partnerships, UDLex, UnifyDevs, community, x09, dut, du.t, Locust, UD, Unify developers, unified developers" />
+  <meta name="description"
+    content="UnifyDevs: a Roblox developer community for sharing projects, finding developers, and contributing on developer events. Join our Discord for support, collaboration, and showcases." />
+  <meta name="keywords"
+    content="Roblox, developers, game dev, Discord, partnerships, UDLex, UnifyDevs, community, x09, dut, du.t, Locust, UD, Unify developers, unified developers" />
   <link rel="canonical" href="https://udlex.com/" />
   <meta name="theme-color" content="#0d1b2a" />
 
   <!-- Open Graph / Facebook / Discord preview -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="UDLex — UnifyDevs Community & Partnerships" />
-  <meta property="og:description" content="A Roblox developer community for sharing projects, finding partners, and joining developer events. Join our Discord for support and collaborations." />
+  <meta property="og:description"
+    content="A Roblox developer community for sharing projects, finding partners, and joining developer events. Join our Discord for support and collaborations." />
   <meta property="og:url" content="https://udlex.com/" />
   <meta property="og:site_name" content="UDLex" />
   <meta property="og:image" content="https://udlex.com/assets/unify-logo.png" />
@@ -25,7 +29,8 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@UnifyDevs" />
   <meta name="twitter:title" content="UDLex — UnifyDevs Community & Partnerships" />
-  <meta name="twitter:description" content="A Roblox developer community for sharing projects, finding partners, and joining developer events." />
+  <meta name="twitter:description"
+    content="A Roblox developer community for sharing projects, finding partners, and joining developer events." />
   <meta name="twitter:image" content="https://udlex.com/assets/unify-logo.png" />
 
   <!-- Apple / Touch icons -->
@@ -48,6 +53,7 @@
 
   <link rel="stylesheet" href="/style.css" />
 </head>
+
 <body>
   <noscript>
     <header class="site-header">
@@ -68,18 +74,128 @@
 
   <!-- Main content -->
   <main class="container">
+
     <section class="hero">
-      <div class="hero-logo">
-        <img src="/assets/unify-logo.png" alt="Unify Logo" class="main-logo">
-      </div>
-      <h1>UDLex</h1>
-      <iframe src="https://discord.com/widget?id=1199081369528189068&theme=dark" width="150" height="50" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-      <p>Welcome to UDLex! The official website for UnifyDevs! We're a Roblox Developer Discord community. Here, you can showcase your work, engage in development-related discussions, and join exciting community events. We strive to create a space where Roblox developers and creators can promote their work and foster their career growth. Let’s collaborate, grow, and unify together!</p>
-      <div class="button-container">
-        <a class="button" href="partners">Partnerships</a>
-        <a class="button" href="https://discord.gg/unifydevs" target="_blank">Join Discord</a>
+      <style>
+        /* tightened hero spacing to bring containers closer together */
+        .hero {
+          background: transparent;
+          padding: 1rem 1rem;
+          /* reduced vertical padding */
+        }
+
+        .hero-inner {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 2rem;
+          /* reduced gap between columns */
+          max-width: 1200px;
+          margin: 0 auto;
+          width: 100%;
+        }
+
+        .hero-left {
+          flex: 1 1 300px;
+          min-width: 0;
+        }
+
+        .hero-right {
+          flex: auto 0 clamp(360px, 38vw, 560px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .hero-logo .main-logo {
+          max-width: 140px;
+          width: 100%;
+          height: auto;
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+
+        .hero-left h1 {
+          margin: 0 0 0.25rem 0;
+          font-size: clamp(1.6rem, 3vw, 2.4rem);
+        }
+
+        .hero-left p {
+          margin: 0 0 0.75rem 0;
+          line-height: 1.45;
+          font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+        }
+
+        .button-container .button {
+          margin-right: 0.5rem;
+        }
+
+        .hero-right .discord-frame {
+          width: 100% !important;
+          height: clamp(420px, 48vw, 700px) !important;
+          max-width: 400px !important;
+          border: 0 !important;
+        }
+
+        @media (max-width: 800px) {
+          .hero-inner {
+            flex-direction: column;
+            align-items: stretch;
+          }
+
+          .hero-right {
+            order: 2;
+            flex: 1 1 auto;
+          }
+
+          .hero-left {
+            order: 1;
+          }
+
+          .hero-right .discord-frame {
+            height: 460px !important;
+            max-width: 100% !important;
+          }
+        }
+
+        /* tighten spacing between major sections site-wide (if needed) */
+        section {
+          margin-top: 0.5rem;
+          margin-bottom: 0.75rem;
+        }
+      </style>
+
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="hero-logo">
+            <img src="/assets/unify-logo.png"
+              onerror="this.onerror=null;this.src='https://placehold.co/140x50/333/fff?text=Logo';" alt="Unify Logo"
+              class="main-logo">
+          </div>
+
+          <h1>UDLex</h1>
+
+          <p>Welcome to UDLex! The official website for UnifyDevs! We're a Roblox Developer Discord community. Here, you
+            can showcase your work, engage in development-related discussions, and join exciting community events. We
+            strive to create a space where Roblox developers and creators can promote their work and foster their career
+            growth. Let’s collaborate, grow, and unify together!</p>
+
+          <div class="button-container">
+            <a class="button" href="/articles/">Articles</a>
+            <a class="button" href="/partners">Partnerships</a>
+            <a class="button" href="https://discord.gg/unifydevs" target="_blank" rel="noopener">Join Discord</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <iframe class="discord-frame" src="https://discord.com/widget?id=1199081369528189068&theme=dark"
+            allowtransparency="true"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            title="Discord widget"></iframe>
+        </div>
       </div>
     </section>
+
 
     <!-- FAQ Section (loaded from JSON) -->
     <section id="faq" class="faq container">

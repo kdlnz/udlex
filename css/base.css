@@ -102,3 +102,19 @@ code {
 @media (max-width: 600px) {
   h1 { font-size: 2rem; }
 }
+
+/* ===== General Links ===== */
+a {
+  color: #82aaff; /* Light Blue */
+  text-decoration: none; /* Removes underline by default */
+}
+
+a:hover,
+a:focus {
+  color: #ff67c0; /* Lighter blue on hover/focus */
+  text-decoration: underline; /* Adds underline for better accessibility on hover */
+}
+
+a:visited {
+  color: #5c9dff; /* Light Green */
+}
